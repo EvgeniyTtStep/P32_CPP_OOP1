@@ -12,7 +12,7 @@ int main(){
 
 cout<<"Успішність студента"<<endl<<endl;
 
-Student student("Lukas");//створення об'єкту классу
+Student student("Lukas", new int[3]{11,9,7}, 3);//створення об'єкту классу
 
 cout<<"Після виклику конструктора"<<"\n";
 
@@ -21,9 +21,9 @@ cout<<"Після виклику конструктора"<<"\n";
 // student.marks[1] = 9;
 // student.marks[2] = 7;
 
-student.setMark(11,0);
-student.setMark(9,1);
-student.setMark(7,2);
+// student.setMark(11,0);
+// student.setMark(9,1);
+// student.setMark(7,2);
 
 double resAver = student.getAvg();
 

@@ -29,9 +29,8 @@ public:
     int getMark(int index);
     void setMark(int mark, int index);
 
-    Student(){
-        cout<<"Конструктор студента"<<"\n";
-    }
+    Student();
+
     Student(const char* studentName, const int* studentMarks, int studentMarksCount);
 
 };

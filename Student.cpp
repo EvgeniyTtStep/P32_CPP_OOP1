@@ -2,6 +2,10 @@
 using namespace std;
 
 
+Student::Student() {
+    cout<<"Конструктор студента"<<"\n";
+}
+
 Student::Student(const char *studentName,
                  const int *studentMarks,
                  int studentMarksCount) {
