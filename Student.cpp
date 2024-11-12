@@ -6,6 +6,15 @@ Student::Student() {
     cout<<"Конструктор студента"<<"\n";
 }
 
+Student::Student(const char* studentName, const int studentMarksCount) {
+    createName(studentName);
+    marks = new int[studentMarksCount];
+    for (int i = 0; i < studentMarksCount; i++) {
+        marks[i] = 0;
+    }
+    marksCount = studentMarksCount;
+}
+
 Student::Student(const char *studentName,
                  const int *studentMarks,
                  int studentMarksCount) {

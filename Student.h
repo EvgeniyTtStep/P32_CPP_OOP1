@@ -31,6 +31,8 @@ public:
 
     Student();
 
+    Student(const char* studentName, int studentMarksCount);
+
     Student(const char* studentName, const int* studentMarks, int studentMarksCount);
 
 };
