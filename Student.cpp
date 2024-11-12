@@ -23,10 +23,15 @@ Student::Student(const char *studentName,
     marks = new int[studentMarksCount];
 
     for (int i = 0; i < studentMarksCount; i++) {
-        marks[i] = studentMarks[i];
+       marks[i] = studentMarks[i];
     }
     marksCount = studentMarksCount;
 }
+
+
+
+
+
 
 void Student::createName(const char *studentName) {
     int nameLength = strlen(studentName);
@@ -73,4 +78,17 @@ void Student::setMark(int mark, int index) {
         mark = 0;
     }
     marks[index] = mark;
+}
+
+Student::~Student() {
+    if (marks != nullptr) {
+        delete[] marks;
+    }
+
+    if (name != nullptr) {
+        delete[]name;
+    }
+
+    cout<<"Кінець деструктора"<<"\n";
+    system("pause");
 }

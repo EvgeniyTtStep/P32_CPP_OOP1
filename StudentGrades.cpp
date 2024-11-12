@@ -28,7 +28,21 @@ cout<<"Після виклику конструктора"<<"\n";
 double resAver = student.getAvg();
 
 
-
 cout<<student.getName()<<" : "<<"Середній бал = "<<resAver<<"\n";
+
+
+    const int size = 2;
+
+    Student* students = new Student[size] {
+        Student("Kevin", new int[3]{11,9,5}, 3),
+        Student("Bob", new int[3]{12,10,8}, 3)
+    };
+
+
+
+    for(Student* stud = students; stud < students + size; stud++) {
+        cout<<stud->getName()<<" : "<<"Середній бал = "<<stud->getAvg()<<"\n"; //-> стрілка вибору елемента
+    }
+
 
 }
