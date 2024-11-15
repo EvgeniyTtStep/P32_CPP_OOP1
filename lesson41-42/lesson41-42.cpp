@@ -6,24 +6,37 @@
 using namespace std;
 
 class Point {
-    public:
+
+public:
     int x;
     int y;
 
+    // // конструктор за замовчуванням
+    // Point() {
+    //     this->x = 0;
+    //     this->y = 0;
+    //     cout << "Point Default constructor\n";
+    // }
+    //
+    // // конструктор з параметрами
+    // Point(int x, int y) {
+    //     this->x = x; //point2.x = x;
+    //     this->y = y; //point2.y = y;
+    //     cout << "Point Parametrized constructor\n";
+    // }
+
     // конструктор за замовчуванням
-    Point() {
-        this->x = 0;
-        this->y = 0;
+    Point() : x(0), y(0) {
         cout << "Point Default constructor\n";
     }
 
     // конструктор з параметрами
-    Point(int x, int y) {
-        this->x = x; //point2.x = x;
-        this->y = y; //point2.y = y;
+    Point(int x, int y) : x(x), y(y) {
         cout << "Point Parametrized constructor\n";
     }
 };
+
+
 
 
 class Rectangle
@@ -59,15 +72,15 @@ public:
 
 
 
-int main(int argc, char *argv[]) {
-    Point point1;
-
-    Point point2{10, 15};
-
-    // використання конструктора за замовчуванням
-    Rectangle rect;
-
-    // використовується конструктор з параметрами
-    Rectangle rect1{ 42, 33, 10, 5};
-
-}
+// int main(int argc, char *argv[]) {
+//     Point point1;
+//
+//     Point point2{10, 15};
+//
+//     // використання конструктора за замовчуванням
+//     Rectangle rect;
+//
+//     // використовується конструктор з параметрами
+//     Rectangle rect1{ 42, 33, 10, 5};
+//
+// }
